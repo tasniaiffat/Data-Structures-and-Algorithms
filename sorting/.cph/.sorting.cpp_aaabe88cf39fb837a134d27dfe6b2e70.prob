@@ -1,0 +1,1 @@
+{"name":"Local: sorting","url":"c:\\Users\\Tasnia Iffat\\Desktop\\incourse\\dsa\\sorting\\sorting.cpp","tests":[{"id":1678644048239,"input":"64 34 25 12 22 11 90","output":"11 12 22 25 34 64 90"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Tasnia Iffat\\Desktop\\incourse\\dsa\\sorting\\sorting.cpp","group":"local","local":true}
