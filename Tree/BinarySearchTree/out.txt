@@ -1,0 +1,24 @@
+Vertex 1
+Pushing 5 2
+Pushing 4 10
+Pushing 2 4
+2
+Vertex 5
+4
+Vertex 4
+Pushing 3 11
+Pushing 7 11
+Pushing 8 9
+9
+Vertex 2
+10
+Vertex 3
+11
+Vertex 7
+Pushing 6 1
+1
+Vertex 8
+11
+Vertex 6
+11
+59

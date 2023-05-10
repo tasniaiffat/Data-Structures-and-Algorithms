@@ -52,7 +52,7 @@ public:
     }
 
     bool isEmpty(){
-        return this->top==-1;
+        return this->size==0;
     }
 
     bool isFull(){
@@ -87,8 +87,11 @@ int main(){
 
     st.push(2);
     st.push(4);
+    cout<<st.pop()<<endl;
     st.push(3);
-    cout<<st.search(2);
+    cout<<st.isEmpty()<<endl;
+    st.pop();
+    cout<<st.isEmpty()<<endl;
 
     return 0;
 }

@@ -2,6 +2,9 @@
 using namespace std;
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL);
 
+
+//diy
+
 class Queue{
 private:
     int capacity;
@@ -27,34 +30,30 @@ public:
     }
 
     void enqueue(int value){
-        if(isFull()){
-            cout<<"Queue Overflow\n";
-            return;
-        }
-
-        if(isEmpty()){
-            this->front++;
-            this->rear++;
-            arr[this->front]=value;
+        if(front==-1 && rear==-1){
+            front=rear=0;
+            arr[rear]=value;
             this->size++;
             return;
         }
 
-        this->rear++;
-        arr[this->rear]=value;
-        this->size++;
+        else if((rear+1)%capacity==front)return;
+        else{
+            rear=(rear+1)%capacity;
+            arr[rear]=value;
+            this->size++;
+        }
     }
 
     int dequeue(){
-        if(isEmpty()){
-            cout<<"Queue Underflow\n";
-            exit(1);
+        if(front==-1)return;
+        if(front=rear){
+            front=rear=-1;
         }
-
-        int value=arr[this->front];
-        this->front++;
+        else{
+            front=(front+1)%capacity;
+        }
         this->size--;
-        return value;
     }
 
     int peek(){
@@ -63,8 +62,7 @@ public:
             exit(1);
         }
 
-        int value=arr[this->front];
-        return value;
+        return arr[front];
     }
 
     void print(){
